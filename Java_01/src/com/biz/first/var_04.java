@@ -1,0 +1,20 @@
+package com.biz.first;
+
+public class var_04 {
+
+	public static void main(String[] args) {
+		
+		int num1 = 30;
+		
+		 num1 = 0;
+		 num1 = 10;
+		 num1 = 40;
+		 num1 = 50;
+		 num1 = 60;
+		 num1 = 0;
+		 num1 = 30+40;
+		
+		
+	}
+
+}
