@@ -6,7 +6,7 @@ import com.biz.bank.service.BankServiceV1;
 
 public class BankExec_02 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 	BankServiceV1 bs = null;
 	Scanner scanner = new Scanner(System.in);

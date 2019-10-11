@@ -2,13 +2,13 @@ package com.biz.bank.exec;
 
 import java.util.Scanner;
 
-import com.biz.bank.service.BankAccServiceV1;
+import com.biz.bank.service.BankServiceV1;
 
 public class BankAccService {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
-		BankAccServiceV1 bs = new BankAccServiceV1("0001", 10000);
+		BankServiceV1 bs = new BankServiceV1("0001", 10000);
 		Scanner scanner = new Scanner(System.in);
 		
 		while(true) {
