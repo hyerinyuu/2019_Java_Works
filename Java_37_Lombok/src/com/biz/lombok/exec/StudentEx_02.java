@@ -31,7 +31,7 @@ public class StudentEx_02 {
 			sRead.readStudent(fileName);
 			List<StudentVO> stdList = sRead.getStdList();
 			sView.setStdList(stdList);
-		
+			sView.view();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -67,10 +67,10 @@ public class StudentEx_02 {
 				}
 			}if(intE == 3) {
 				
-				System.out.println("찾으시는 학생의 최소 학년을 입력하세요 >> ");
+				System.out.print("찾으시는 학생의 최소 학년을 입력하세요 >> ");
 				String strLessGrade = scan.nextLine();
 				
-				System.out.println("찾으시는 학생의 최대 학년을 입력하세요 >> ");
+				System.out.print("찾으시는 학생의 최대 학년을 입력하세요 >> ");
 				String strMaxGrade = scan.nextLine();
 				
 				try {

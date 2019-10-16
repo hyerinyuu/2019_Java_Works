@@ -27,7 +27,7 @@ public class StudentEx_01 {
 		stdList.add(stdVO);
 		
 		// StudentVO의 필드생성자를 이용한 값 주입
-		// 생성자를 이용해 필드갑을 초기화 하면서 객체를 생성하고 변수 객체에 담았다가 List에 추가
+		// 생성자를 이용해 필드값을 초기화 하면서 객체를 생성하고 변수 객체에 담았다가 List에 추가
 		stdVO = new StudentVO("003","성춘향","010-333","남원시",3,"005");
 		stdList.add(stdVO);
 		

@@ -6,11 +6,6 @@ import com.biz.lombok.domain.StudentVO;
 
 public class StudentViewServiceV1 extends StudentViewServiceABS {
 	
-	List<StudentVO> stdList;
-	
-	public void setStdList(List<StudentVO> stdList) {
-		this.stdList = stdList;
-	}
 	
 	// 모든 학생들의 list를 보여주는 method
 	@Override
@@ -34,9 +29,18 @@ public class StudentViewServiceV1 extends StudentViewServiceABS {
 		
 		for(StudentVO stdVO : stdList) {
 			
-			if(stdVO.getS_name().contains(strName))
-				
+			if(stdVO.getS_name().contains(strName)) {
 				this.listBody(stdVO);
+			}else {
+				// 이 상태에서는 일치하는 제목이 없으면 제목을 확인해달라는 내용이
+				// console에 5번 표시되고
+				// 일치하는 제목이 있으면 그 제목을 표시해주고
+				// 제목을 확인해달라는 메시지가 4번 표시됩니다
+				// 하지만 이상한 제목을 입력했을때 리스트에 아무것도 표시되지 않는 것보다 나을 것 같아서
+				// 이대로 제출합니다.
+				System.out.println("제목을 다시 확인해주세요");
+			}
+				
 		}
 		
 	}
@@ -70,7 +74,7 @@ public class StudentViewServiceV1 extends StudentViewServiceABS {
 		for(StudentVO stdVO : stdList) {
 			
 			int grade = stdVO.getS_grade();
-			if(grade <= grGrade && grade >= lessGrade) {
+			if(grade >= grGrade && grade <= lessGrade) {
 				
 				this.listBody(stdVO);
 			}
